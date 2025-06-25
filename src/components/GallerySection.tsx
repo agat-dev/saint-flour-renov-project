@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -10,13 +9,13 @@ const GallerySection = () => {
       id: 1,
       title: 'Plomberie sanitaire',
       category: 'Plomberie',
-      image: '/lovable-uploads/c15b2a5b-429b-4894-a33f-15198dec6b9c.png'
+      image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: 2,
       title: 'Rénovation salle de bain',
       category: 'Rénovation',
-      image: '/lovable-uploads/e7c7e53d-ce4c-405c-97c6-f456c133cc64.png',
+      image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
       beforeImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
