@@ -5,8 +5,8 @@ import { motion } from 'framer-motion';
 
 const Logo = ({ className = "", isScrolled = false }: { className?: string, isScrolled?: boolean }) => (
   <svg 
-    className={`h-6 w-auto sm:h-8 max-w-[120px] sm:max-w-[150px] flex-shrink-0 ${className}`}
-    viewBox="0 0 150 60" 
+    className={`h-8 w-auto sm:h-12 max-w-[160px] sm:max-w-[200px] flex-shrink-0 ${className}`}
+    viewBox="0 0 180 80" 
     fill="none" 
     xmlns="http://www.w3.org/2000/svg"
   >
@@ -36,9 +36,9 @@ const Logo = ({ className = "", isScrolled = false }: { className?: string, isSc
     {/* Text */}
     <text 
       x="50" 
-      y="25" 
+      y="30" 
       fontFamily="Arial, sans-serif" 
-      fontSize="14" 
+      fontSize="18" 
       fontWeight="bold" 
       fill={isScrolled ? "#1e40af" : "#ffffff"}
     >
@@ -46,9 +46,9 @@ const Logo = ({ className = "", isScrolled = false }: { className?: string, isSc
     </text>
     <text 
       x="50" 
-      y="42" 
+      y="50" 
       fontFamily="Arial, sans-serif" 
-      fontSize="12" 
+      fontSize="14" 
       fill={isScrolled ? "#3b82f6" : "#ffffff"}
     >
       Rénov'
