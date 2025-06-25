@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Wrench, Zap, Droplets, AlertCircle } from 'lucide-react';
 import ServiceCard from './ServiceCard';
@@ -8,7 +7,7 @@ const ServicesSection = () => {
     {
       icon: Wrench,
       title: 'Rénovation',
-      description: 'Rénovation complète ou partielle de votre habitat. Cuisine, salle de bain, peinture, sols.',
+      description: 'Rénovation complète ou partielle de votre habitat selon vos besoins et votre budget.',
       features: ['Devis détaillé', 'Matériaux de qualité', 'Finitions soignées'],
       number: '01'
     },
