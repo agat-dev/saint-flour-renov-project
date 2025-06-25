@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { CheckCircle, Award, Clock, Heart } from 'lucide-react';
 
@@ -40,7 +39,7 @@ const AboutSection = () => {
           >
             <div className="relative rounded-lg overflow-hidden shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                src="/lovable-uploads/45077b0f-c05d-4ce4-9f2c-e722dae0bb8e.png"
                 alt="Jérémy, artisan BTP à Saint-Flour"
                 className="w-full h-96 object-cover"
               />
