@@ -5,50 +5,50 @@ import { motion } from 'framer-motion';
 
 const Logo = ({ className = "", isScrolled = false }: { className?: string, isScrolled?: boolean }) => (
   <svg 
-    className={`h-6 w-auto sm:h-8 flex-shrink-0 ${className}`}
-    viewBox="0 0 200 60" 
+    className={`h-6 w-auto sm:h-8 max-w-[120px] sm:max-w-[150px] flex-shrink-0 ${className}`}
+    viewBox="0 0 150 60" 
     fill="none" 
     xmlns="http://www.w3.org/2000/svg"
   >
     {/* Wrench icon */}
     <path 
-      d="M15 25L25 15C26.5 13.5 29 13.5 30.5 15L35 19.5C36.5 21 36.5 23.5 35 25L25 35L20 30L15 25Z" 
+      d="M10 25L18 17C19.5 15.5 22 15.5 23.5 17L28 21.5C29.5 23 29.5 25.5 28 27L20 35L15 30L10 25Z" 
       fill={isScrolled ? "#1e40af" : "#ffffff"} 
       stroke={isScrolled ? "#1e40af" : "#ffffff"} 
       strokeWidth="1"
     />
     {/* Pipe/tube */}
     <rect 
-      x="30" 
+      x="23" 
       y="20" 
-      width="25" 
+      width="20" 
       height="4" 
       rx="2" 
       fill={isScrolled ? "#3b82f6" : "#ffffff"}
     />
     {/* House outline */}
     <path 
-      d="M10 35L20 25L30 35V45H10V35Z" 
+      d="M5 35L15 25L25 35V45H5V35Z" 
       stroke={isScrolled ? "#1e40af" : "#ffffff"} 
       strokeWidth="2" 
       fill="none"
     />
     {/* Text */}
     <text 
-      x="65" 
+      x="50" 
       y="25" 
       fontFamily="Arial, sans-serif" 
-      fontSize="16" 
+      fontSize="14" 
       fontWeight="bold" 
       fill={isScrolled ? "#1e40af" : "#ffffff"}
     >
       Jérémy
     </text>
     <text 
-      x="65" 
+      x="50" 
       y="42" 
       fontFamily="Arial, sans-serif" 
-      fontSize="14" 
+      fontSize="12" 
       fill={isScrolled ? "#3b82f6" : "#ffffff"}
     >
       Rénov'
