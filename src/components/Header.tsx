@@ -1,11 +1,10 @@
-
 import { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Logo = ({ className = "", isScrolled = false }: { className?: string, isScrolled?: boolean }) => (
   <svg 
-    className={`h-10 w-auto ${className}`}
+    className={`h-8 w-auto ${className}`}
     viewBox="0 0 200 60" 
     fill="none" 
     xmlns="http://www.w3.org/2000/svg"
@@ -81,21 +80,21 @@ const Header = () => {
     <motion.header 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
+      className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-in-out ${
         isScrolled 
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-white/20' 
           : 'bg-gradient-to-b from-black/30 via-black/20 to-transparent backdrop-blur-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+      <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
+        <div className="flex justify-between items-center h-14 sm:h-16 min-h-0">
           {/* Logo */}
-          <div className="flex items-center">
+          <div className="flex items-center min-w-0">
             <Logo isScrolled={isScrolled} />
           </div>
 
           {/* Navigation Desktop */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex space-x-6 lg:space-x-8">
             <button 
               onClick={() => scrollToSection('accueil')}
               className={`transition-all duration-300 ease-in-out ${
@@ -139,19 +138,19 @@ const Header = () => {
           </nav>
 
           {/* CTA Desktop */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3 lg:space-x-4 min-w-0">
             <a 
               href="tel:0123456789"
-              className={`flex items-center transition-all duration-300 ease-in-out ${
+              className={`flex items-center transition-all duration-300 ease-in-out whitespace-nowrap ${
                 isScrolled ? 'text-blue-600 hover:text-blue-700' : 'text-white hover:text-gray-200'
               }`}
             >
               <Phone className="h-4 w-4 mr-2" />
-              <span className="font-medium">01 23 45 67 89</span>
+              <span className="font-medium text-sm lg:text-base">01 23 45 67 89</span>
             </a>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-3 lg:px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg text-sm lg:text-base whitespace-nowrap"
             >
               Devis gratuit
             </button>
@@ -165,7 +164,7 @@ const Header = () => {
                 isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
               }`}
             >
-              {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              {isMobileMenuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
             </button>
           </div>
         </div>
@@ -176,9 +175,9 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/50"
+            className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/50 w-full"
           >
-            <div className="px-2 pt-2 pb-3 space-y-1">
+            <div className="px-2 pt-2 pb-3 space-y-1 w-full">
               <button 
                 onClick={() => scrollToSection('accueil')}
                 className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-200"
