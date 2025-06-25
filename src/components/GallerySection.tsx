@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -15,8 +16,7 @@ const GallerySection = () => {
       id: 2,
       title: 'Rénovation salle de bain',
       category: 'Rénovation',
-      image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-      beforeImage: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: 'https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: 3,
@@ -74,7 +74,7 @@ const GallerySection = () => {
             <div className="space-y-4">
               <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  src="/lovable-uploads/ded9cd4e-c54d-4572-9113-61b3c132ba39.png"
                   alt="Avant rénovation"
                   className="w-full h-64 object-cover"
                 />
@@ -83,7 +83,7 @@ const GallerySection = () => {
             <div className="space-y-4">
               <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <img 
-                  src="https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  src="/lovable-uploads/d82e3d6e-4f5d-47f4-8568-327aa1600734.png"
                   alt="Après rénovation"
                   className="w-full h-64 object-cover"
                 />
