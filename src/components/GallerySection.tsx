@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 
@@ -22,7 +21,7 @@ const GallerySection = () => {
       id: 3,
       title: 'Carrelage sol et mur',
       category: 'Rénovation',
-      image: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: '/lovable-uploads/8108d20e-4afc-4348-9497-c9bde8d01480.png'
     },
     {
       id: 4,
