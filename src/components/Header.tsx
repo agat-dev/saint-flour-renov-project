@@ -176,7 +176,7 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden w-full bg-white/95 backdrop-blur-md border-t border-gray-200/50 max-w-full"
+            className="md:hidden w-full bg-white/95 backdrop-blur-md border-t border-gray-200/50"
           >
             <div className="px-2 pt-2 pb-3 space-y-1 max-w-full">
               <button 
