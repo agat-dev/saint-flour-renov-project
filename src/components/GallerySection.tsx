@@ -27,7 +27,7 @@ const GallerySection = () => {
       id: 4,
       title: 'Rénovation cuisine',
       category: 'Rénovation',
-      image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
+      image: '/lovable-uploads/55cd81c3-a31a-40a4-a146-fb10d49df47c.png'
     },
     {
       id: 5,
