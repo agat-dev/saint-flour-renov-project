@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
-const Logo = ({ className = "" }: { className?: string }) => (
+const Logo = ({ className = "", isScrolled = false }: { className?: string, isScrolled?: boolean }) => (
   <svg 
     className={`h-10 w-auto ${className}`}
     viewBox="0 0 200 60" 
@@ -13,8 +13,8 @@ const Logo = ({ className = "" }: { className?: string }) => (
     {/* Wrench icon */}
     <path 
       d="M15 25L25 15C26.5 13.5 29 13.5 30.5 15L35 19.5C36.5 21 36.5 23.5 35 25L25 35L20 30L15 25Z" 
-      fill="#1e40af" 
-      stroke="#1e40af" 
+      fill={isScrolled ? "#1e40af" : "#ffffff"} 
+      stroke={isScrolled ? "#1e40af" : "#ffffff"} 
       strokeWidth="1"
     />
     {/* Pipe/tube */}
@@ -24,12 +24,12 @@ const Logo = ({ className = "" }: { className?: string }) => (
       width="25" 
       height="4" 
       rx="2" 
-      fill="#3b82f6"
+      fill={isScrolled ? "#3b82f6" : "#ffffff"}
     />
     {/* House outline */}
     <path 
       d="M10 35L20 25L30 35V45H10V35Z" 
-      stroke="#1e40af" 
+      stroke={isScrolled ? "#1e40af" : "#ffffff"} 
       strokeWidth="2" 
       fill="none"
     />
@@ -40,7 +40,7 @@ const Logo = ({ className = "" }: { className?: string }) => (
       fontFamily="Arial, sans-serif" 
       fontSize="16" 
       fontWeight="bold" 
-      fill="#1e40af"
+      fill={isScrolled ? "#1e40af" : "#ffffff"}
     >
       Jérémy
     </text>
@@ -49,7 +49,7 @@ const Logo = ({ className = "" }: { className?: string }) => (
       y="42" 
       fontFamily="Arial, sans-serif" 
       fontSize="14" 
-      fill="#3b82f6"
+      fill={isScrolled ? "#3b82f6" : "#ffffff"}
     >
       Rénov'
     </text>
@@ -89,38 +89,48 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Logo />
+            <Logo isScrolled={isScrolled} />
           </div>
 
           {/* Navigation Desktop */}
           <nav className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('accueil')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
+              }`}
             >
               Accueil
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
+              }`}
             >
               Services
             </button>
             <button 
               onClick={() => scrollToSection('a-propos')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
+              }`}
             >
               À propos
             </button>
             <button 
               onClick={() => scrollToSection('realisations')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
+              }`}
             >
               Réalisations
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
+              }`}
             >
               Contact
             </button>
@@ -130,7 +140,9 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a 
               href="tel:0123456789"
-              className="flex items-center text-blue-600 hover:text-blue-700 transition-colors"
+              className={`flex items-center transition-colors ${
+                isScrolled ? 'text-blue-600 hover:text-blue-700' : 'text-white hover:text-gray-200'
+              }`}
             >
               <Phone className="h-4 w-4 mr-2" />
               <span className="font-medium">01 23 45 67 89</span>
@@ -147,7 +159,9 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-blue-600 transition-colors"
+              className={`transition-colors ${
+                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
+              }`}
             >
               {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
