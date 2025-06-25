@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Logo = ({ className = "", isScrolled = false }: { className?: string, isScrolled?: boolean }) => (
   <svg 
-    className={`h-12 w-auto sm:h-20 max-w-[220px] sm:max-w-[280px] flex-shrink-0 ${className}`}
+    className={`h-12 w-auto sm:h-20 max-w-[220px] sm:max-w-[280px] flex-shrink-0 pt-2 ${className}`}
     viewBox="0 0 180 80" 
     fill="none" 
     xmlns="http://www.w3.org/2000/svg"
