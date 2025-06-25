@@ -81,8 +81,10 @@ const Header = () => {
     <motion.header 
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-lg' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-in-out ${
+        isScrolled 
+          ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-white/20' 
+          : 'bg-gradient-to-b from-black/30 via-black/20 to-transparent backdrop-blur-sm'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +98,7 @@ const Header = () => {
           <nav className="hidden md:flex space-x-8">
             <button 
               onClick={() => scrollToSection('accueil')}
-              className={`transition-colors ${
+              className={`transition-all duration-300 ease-in-out ${
                 isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
               }`}
             >
@@ -104,7 +106,7 @@ const Header = () => {
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className={`transition-colors ${
+              className={`transition-all duration-300 ease-in-out ${
                 isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
               }`}
             >
@@ -112,7 +114,7 @@ const Header = () => {
             </button>
             <button 
               onClick={() => scrollToSection('a-propos')}
-              className={`transition-colors ${
+              className={`transition-all duration-300 ease-in-out ${
                 isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
               }`}
             >
@@ -120,7 +122,7 @@ const Header = () => {
             </button>
             <button 
               onClick={() => scrollToSection('realisations')}
-              className={`transition-colors ${
+              className={`transition-all duration-300 ease-in-out ${
                 isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
               }`}
             >
@@ -128,7 +130,7 @@ const Header = () => {
             </button>
             <button 
               onClick={() => scrollToSection('contact')}
-              className={`transition-colors ${
+              className={`transition-all duration-300 ease-in-out ${
                 isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
               }`}
             >
@@ -140,7 +142,7 @@ const Header = () => {
           <div className="hidden md:flex items-center space-x-4">
             <a 
               href="tel:0123456789"
-              className={`flex items-center transition-colors ${
+              className={`flex items-center transition-all duration-300 ease-in-out ${
                 isScrolled ? 'text-blue-600 hover:text-blue-700' : 'text-white hover:text-gray-200'
               }`}
             >
@@ -149,7 +151,7 @@ const Header = () => {
             </a>
             <button 
               onClick={() => scrollToSection('contact')}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors"
+              className="bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-lg"
             >
               Devis gratuit
             </button>
@@ -159,7 +161,7 @@ const Header = () => {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`transition-colors ${
+              className={`transition-all duration-300 ease-in-out ${
                 isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-gray-200'
               }`}
             >
@@ -174,50 +176,50 @@ const Header = () => {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-white border-t border-gray-200"
+            className="md:hidden bg-white/95 backdrop-blur-md border-t border-gray-200/50"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button 
                 onClick={() => scrollToSection('accueil')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-200"
               >
                 Accueil
               </button>
               <button 
                 onClick={() => scrollToSection('services')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-200"
               >
                 Services
               </button>
               <button 
                 onClick={() => scrollToSection('a-propos')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-200"
               >
                 À propos
               </button>
               <button 
                 onClick={() => scrollToSection('realisations')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-200"
               >
                 Réalisations
               </button>
               <button 
                 onClick={() => scrollToSection('contact')}
-                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-colors"
+                className="block w-full text-left px-3 py-2 text-gray-700 hover:text-blue-600 transition-all duration-200"
               >
                 Contact
               </button>
-              <div className="px-3 py-2 border-t border-gray-200">
+              <div className="px-3 py-2 border-t border-gray-200/50">
                 <a 
                   href="tel:0123456789"
-                  className="flex items-center text-blue-600 hover:text-blue-700 transition-colors mb-2"
+                  className="flex items-center text-blue-600 hover:text-blue-700 transition-all duration-200 mb-2"
                 >
                   <Phone className="h-4 w-4 mr-2" />
                   <span className="font-medium">01 23 45 67 89</span>
                 </a>
                 <button 
                   onClick={() => scrollToSection('contact')}
-                  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors"
+                  className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-all duration-300 hover:scale-105"
                 >
                   Devis gratuit
                 </button>
