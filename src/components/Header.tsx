@@ -90,7 +90,7 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center flex-shrink-0">
+          <div className="flex items-center">
             <Logo isScrolled={isScrolled} />
           </div>
 
@@ -139,7 +139,7 @@ const Header = () => {
           </nav>
 
           {/* CTA Desktop */}
-          <div className="hidden md:flex items-center space-x-4 flex-shrink-0">
+          <div className="hidden md:flex items-center space-x-4">
             <a 
               href="tel:0123456789"
               className={`flex items-center transition-all duration-300 ease-in-out ${
@@ -158,7 +158,7 @@ const Header = () => {
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden flex-shrink-0">
+          <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className={`p-2 rounded-md transition-all duration-300 ease-in-out ${
