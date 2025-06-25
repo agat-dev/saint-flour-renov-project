@@ -71,12 +71,8 @@ const GallerySection = () => {
           viewport={{ once: true }}
           className="mb-16"
         >
-          <h3 className="text-2xl font-semibold text-gray-700 text-center mb-8">
-            Avant / Après
-          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="space-y-4">
-              <h4 className="text-lg font-medium text-gray-700 text-center">Avant</h4>
               <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <img 
                   src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
@@ -86,7 +82,6 @@ const GallerySection = () => {
               </div>
             </div>
             <div className="space-y-4">
-              <h4 className="text-lg font-medium text-gray-700 text-center">Après</h4>
               <div className="relative rounded-lg overflow-hidden shadow-lg">
                 <img 
                   src="https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
