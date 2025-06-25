@@ -3,6 +3,59 @@ import { useState, useEffect } from 'react';
 import { Phone, Menu, X } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+const Logo = ({ className = "" }: { className?: string }) => (
+  <svg 
+    className={`h-10 w-auto ${className}`}
+    viewBox="0 0 200 60" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {/* Wrench icon */}
+    <path 
+      d="M15 25L25 15C26.5 13.5 29 13.5 30.5 15L35 19.5C36.5 21 36.5 23.5 35 25L25 35L20 30L15 25Z" 
+      fill="#1e40af" 
+      stroke="#1e40af" 
+      strokeWidth="1"
+    />
+    {/* Pipe/tube */}
+    <rect 
+      x="30" 
+      y="20" 
+      width="25" 
+      height="4" 
+      rx="2" 
+      fill="#3b82f6"
+    />
+    {/* House outline */}
+    <path 
+      d="M10 35L20 25L30 35V45H10V35Z" 
+      stroke="#1e40af" 
+      strokeWidth="2" 
+      fill="none"
+    />
+    {/* Text */}
+    <text 
+      x="65" 
+      y="25" 
+      fontFamily="Arial, sans-serif" 
+      fontSize="16" 
+      fontWeight="bold" 
+      fill="#1e40af"
+    >
+      Jérémy
+    </text>
+    <text 
+      x="65" 
+      y="42" 
+      fontFamily="Arial, sans-serif" 
+      fontSize="14" 
+      fill="#3b82f6"
+    >
+      Rénov'
+    </text>
+  </svg>
+);
+
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,7 +89,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <h1 className="text-xl font-bold text-blue-800">Jérémy Rénov'</h1>
+            <Logo />
           </div>
 
           {/* Navigation Desktop */}
