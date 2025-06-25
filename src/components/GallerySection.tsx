@@ -15,27 +15,27 @@ const GallerySection = () => {
     },
     {
       id: 2,
+      title: 'Mise aux normes électriques',
+      category: 'Électricité',
+      image: '/lovable-uploads/72cb4df0-e601-4700-9fbd-645f8543acce.png'
+    },
+    {
+      id: 3,
       title: 'Installation électrique',
       category: 'Électricité',
       image: 'https://images.unsplash.com/photo-1621905251918-48416bd8575a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
-      id: 3,
+      id: 4,
       title: 'Rénovation cuisine',
       category: 'Rénovation',
       image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
-      id: 4,
+      id: 5,
       title: 'Plomberie sanitaire',
       category: 'Plomberie',
       image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
-    },
-    {
-      id: 5,
-      title: 'Mise aux normes électriques',
-      category: 'Électricité',
-      image: 'https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'
     },
     {
       id: 6,
