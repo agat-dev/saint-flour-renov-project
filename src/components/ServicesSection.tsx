@@ -1,6 +1,7 @@
 
 import { motion } from 'framer-motion';
 import { Wrench, Zap, Droplets, AlertCircle } from 'lucide-react';
+import ServiceCard from './ServiceCard';
 
 const ServicesSection = () => {
   const services = [
@@ -8,25 +9,29 @@ const ServicesSection = () => {
       icon: Wrench,
       title: 'Rénovation',
       description: 'Rénovation complète ou partielle de votre habitat. Cuisine, salle de bain, peinture, sols.',
-      features: ['Devis détaillé', 'Matériaux de qualité', 'Finitions soignées']
+      features: ['Devis détaillé', 'Matériaux de qualité', 'Finitions soignées'],
+      number: '01'
     },
     {
       icon: Droplets,
       title: 'Plomberie',
       description: 'Installation, réparation et entretien de vos équipements sanitaires et de chauffage.',
-      features: ['Dépannage 24/7', 'Installation sanitaire', 'Chauffage']
+      features: ['Dépannage 24/7', 'Installation sanitaire', 'Chauffage'],
+      number: '02'
     },
     {
       icon: Zap,
       title: 'Électricité',
       description: 'Mise aux normes, installation électrique complète et dépannage électrique.',
-      features: ['Mise aux normes', 'Éclairage LED', 'Tableau électrique']
+      features: ['Mise aux normes', 'Éclairage LED', 'Tableau électrique'],
+      number: '03'
     },
     {
       icon: AlertCircle,
       title: 'Dépannage',
       description: 'Service d\'urgence 24h/24 pour tous vos problèmes de plomberie et électricité.',
-      features: ['Intervention rapide', 'Disponible 24/7', 'Tarif transparent']
+      features: ['Intervention rapide', 'Disponible 24/7', 'Tarif transparent'],
+      number: '04'
     }
   ];
 
@@ -48,7 +53,7 @@ const ServicesSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 justify-items-center">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
@@ -56,30 +61,14 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              <div className="flex flex-col items-center text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                  <service.icon className="h-8 w-8 text-blue-600" />
-                </div>
-                
-                <h3 className="text-xl font-semibold text-gray-700 mb-3">
-                  {service.title}
-                </h3>
-                
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {service.description}
-                </p>
-                
-                <ul className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="text-sm text-gray-500 flex items-center">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full mr-2" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ServiceCard
+                icon={service.icon}
+                title={service.title}
+                description={service.description}
+                features={service.features}
+                number={service.number}
+              />
             </motion.div>
           ))}
         </div>
