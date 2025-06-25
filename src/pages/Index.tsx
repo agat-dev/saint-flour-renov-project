@@ -11,15 +11,17 @@ import Footer from '../components/Footer';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-white font-inter">
+    <div className="min-h-screen bg-white font-inter max-w-full overflow-x-hidden">
       <Header />
-      <HeroSection />
-      <ServicesSection />
-      <AboutSection />
-      <GallerySection />
-      <EmergencySection />
-      <TestimonialsSection />
-      <ContactSection />
+      <main className="max-w-full overflow-x-hidden">
+        <HeroSection />
+        <ServicesSection />
+        <AboutSection />
+        <GallerySection />
+        <EmergencySection />
+        <TestimonialsSection />
+        <ContactSection />
+      </main>
       <Footer />
     </div>
   );
