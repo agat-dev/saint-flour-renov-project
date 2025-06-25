@@ -86,7 +86,7 @@ const Header = () => {
           : 'bg-gradient-to-b from-black/30 via-black/20 to-transparent backdrop-blur-sm'
       }`}
     >
-      <div className="w-full max-w-7xl mx-auto px-3 sm:px-4 lg:px-6">
+      <div className="w-full max-w-screen mx-auto px-3 sm:px-4 lg:px-6">
         <div className="flex justify-between items-center h-14 sm:h-16 min-h-0">
           {/* Logo */}
           <div className="flex items-center min-w-0">
