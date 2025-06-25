@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Phone, Award, Users } from 'lucide-react';
 
@@ -16,7 +15,7 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url("https://images.unsplash.com/photo-1487958449943-2429e8be8625?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80")'
+          backgroundImage: 'url("/lovable-uploads/5252e0de-a536-4c1f-8e52-93a251b69ef2.png")'
         }}
       />
       
